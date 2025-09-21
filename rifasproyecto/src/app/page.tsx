@@ -112,6 +112,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold">DINÁMICAS PITER</h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto">Participa fácil y sencillo, gana con nosotros</p>
+          
+          {/* WhatsApp CTA debajo del título */}
+          <div className="mt-6">
+            <a
+              href="https://chat.whatsapp.com/C5pf6FPG4Lk74PObJYQqiR?mode=ems_copy_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 shadow-lg text-lg font-semibold transform hover:scale-105 transition"
+            >
+              <FaWhatsapp className="text-xl" /> ¡Únete a nuestro WhatsApp!
+            </a>
+          </div>
         </div>
       </header>
 
@@ -156,6 +168,18 @@ export default function Home() {
                 </div>
               </figure>
             ))}
+          </div>
+          
+          {/* WhatsApp CTA debajo de los videos */}
+          <div className="mt-8 text-center">
+            <a
+              href="https://chat.whatsapp.com/C5pf6FPG4Lk74PObJYQqiR?mode=ems_copy_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 shadow-xl text-xl font-bold transform hover:scale-105 transition"
+            >
+              <FaWhatsapp className="text-2xl" /> ¡Participa Ahora en WhatsApp!
+            </a>
           </div>
         </div>
       </section>
