@@ -43,7 +43,7 @@ const nextConfig: NextConfig = {
 
   // Optimización de bundle
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Deshabilitado temporalmente por error de critters
   },
 };
 

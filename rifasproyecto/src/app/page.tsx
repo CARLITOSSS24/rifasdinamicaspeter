@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import { FaWhatsapp, FaFacebook, FaVolumeMute, FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const videos = ["/v1.mp4", "/v2.mp4", "/v3.mp4"];
   const comprobantes = ["/comprobante1.png", "/comprobante2.png", "/comprobante3.png", "/comprobante4.png"];
 
@@ -73,7 +74,13 @@ export default function Home(): JSX.Element {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="logo" className="w-10 h-10 rounded-full object-contain" />
+              <Image 
+                src="/logo.png" 
+                alt="logo" 
+                width={40}
+                height={40}
+                className="rounded-full object-contain" 
+              />
               <span className="font-semibold text-lg">DINÁMICAS PITER</span>
             </div>
 
@@ -119,7 +126,9 @@ export default function Home(): JSX.Element {
               >
                 {/* Video: width full, height auto, max-height responsive, object-contain */}
                 <video
-                  ref={(el) => (videoRefs.current[idx] = el)}
+                  ref={(el) => {
+                    videoRefs.current[idx] = el;
+                  }}
                   src={src}
                   className="w-full h-auto object-contain bg-black"
                   autoPlay
@@ -189,7 +198,13 @@ export default function Home(): JSX.Element {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {comprobantes.map((img, i) => (
               <div key={i} className="bg-black rounded-xl overflow-hidden shadow hover:scale-105 transition transform">
-                <img src={img} alt={`comprobante-${i + 1}`} className="w-full h-auto object-contain" />
+                <Image 
+                  src={img} 
+                  alt={`comprobante-${i + 1}`} 
+                  width={300}
+                  height={400}
+                  className="w-full h-auto object-contain" 
+                />
               </div>
             ))}
           </div>
